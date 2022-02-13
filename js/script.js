@@ -12,4 +12,10 @@ $(document).ready(function(){
     $('html').css("scrollBehavior", "smooth");
   });
 
+  $('.menu-btn').click(function(){
+    $('.navbar ul').toggleClass('menu-left');
+    $('.menu-btn').toggleClass('rotate');
+
+  });
+
 });

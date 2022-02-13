@@ -34,7 +34,7 @@
 	align-items: center;
 	justify-content: space-between;
 }
-
+.menu-btn{display: none;}
 .navbar .nav-menu h1{
 	display: block;
 	font-weight: 500;
@@ -42,9 +42,7 @@
 .navbar .nav-menu .menu{
 	display: flex;
 }
-.navbar .nav-menu .menu div{
-	display: none;
-}
+
 .navbar .nav-menu .menu li {
 	display: inline-flex;
 	margin: 0 20px 10px 0;
@@ -209,7 +207,7 @@
 h2{	
 	text-align: center;
 	font-weight: 600;
-	font-size: 5em;	
+	font-size: 80px;
 	color: #222;
 }
 
@@ -251,28 +249,39 @@ h2{
 	background: #222;
 }
 
+
 /*about us*/
 .about{
 	margin: 20px 0;
 }
 .about .max-width{
-	width: 100%;
 	display: inline-flex;
 	padding: 40px 50px;
-
-
 }
 .about .column{
 	width: 100%;
 	height: auto;
+	display: block;
 }
-.about .left img{
+
+.about .column.left{
+	justify-content: center;
+}
+.about .column.right{
+	align-items: center;
+	font-size: 20px;
+	padding-left: 30px;
+}
+.about .column.left img{
+	display: block;
 	background-size: cover;
 	object-fit: cover;
 	width: 500px;
 	height: 600px;
+	padding: 20px;
 }
-.about .right{
+.about .column.right{
+
 	display: flex;
 	align-items: center;
 	font-size: 20px;
@@ -387,10 +396,10 @@ h2{
 	padding: 18px 43px;
 	background: rgb(250, 50, 50);
 }
+
 /*Contact*/
 .contact{
 	position: relative;
-	width: 100%;
 	background: url("images/footer.jpg") no-repeat;
 	background-size: cover;
 	background-attachment: scroll;
@@ -422,7 +431,6 @@ h5{
 }
 .contact .max-width .contact-cont{
 	display: flex;
-	width: 100%;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
@@ -430,7 +438,8 @@ h5{
 }
 .contact .contact-cont .contact-info{
 	width: calc(30% - 10px);
-	padding: 0 100px;
+	padding: 0 auto;
+	margin-left: 50px;
 }
 .contact .contact-cont ul{
 	list-style: none;
@@ -471,7 +480,236 @@ body{
 
 
 /*RESPONSIVE DESIGN*/
+
+@media(max-width: 1300px){
+	.col-1{
+		width: 1300px;
+	}
+	#radio2:checked ~ .first {
+	margin-left: -1300px;
+	}
+	#radio3:checked ~ .first {
+	margin-left: -2600px;
+	}
+	.package .column .col-pack{
+	width: calc(30% - 20px);
+}
+}
+@media(max-width: 1200px){
+	.service .max-width .serv-cont .container{
+	width: calc(20% - 20px);
+}
+.package .column .col-pack{
+	width: calc(30% - 20px);
+}
+.col-1{
+		width: 1200px;
+	}
+	#radio2:checked ~ .first {
+	margin-left: -1200px;
+	}
+	#radio3:checked ~ .first {
+	margin-left: -2400px;
+	}
+}
+@media(max-width: 1104px){
+	.about .column.left img{
+	display: block;
+	width: 400px;
+	height: 500px;
+}
+	.about .column{
+	width: 100%;
+	height: auto;
+	display: inline-block;
+
+}
+.about .column.left{
+	display: flex;
+	width: 50%;
+}
+.about .column.right{
+	display: flex;
+
+	width: 50%;
+	}
+	.package .column .col-pack{
+	width: calc(40% - 20px);
+}
+	.col-1{
+		width: 1104px;
+	}
+	#radio2:checked ~ .first {
+	margin-left: -1104px;
+	}
+	#radio3:checked ~ .first {
+	margin-left: -2208px;
+	}}
+@media(max-width: 991px){
+
+	.package .column .col-pack{
+	width: calc(50% - 15px);
+}
+	.col-1{
+		width: 991px;
+	}
+	#radio2:checked ~ .first {
+	margin-left: -991px;
+	}
+	#radio3:checked ~ .first {
+	margin-left: -1982px;
+	}
+
+	.service .max-width .serv-cont .container{
+	width: calc(30% - 20px);
+}
+@media(max-width: 947px){
+
+	.contact .max-width{
+	padding: auto 0;
+}
+.contact .contact-cont .contact-info ul li a{
+	font-size: 15px;
+}
+h5{font-size: 25px;}
+	.contact .contact-cont .contact-info{
+	width: calc(45% - 20px);
+	margin-bottom: 20px;
+}
+	.about .column.left img{
+	display: block;
+	width: 400px;
+	height: 500px;
+}
+	.about{
+		margin: 0;
+	}
+	.about .max-width{
+	display: flex;
+	width: 100%;
+	height: auto;
+	display: inline-block;
+
+}
+.about .column.left{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+.about .column.right{
+	width: 100%;
+	display: block;
+	text-align: center;
+	}
+.about .right span{
+	justify-content: center;
+	text-align: justify;
+}
+	.package .column .col-pack{
+	width: calc(50% - 15px);
+}
+	.col-1{
+		width: 947px;
+	}
+	#radio2:checked ~ .first {
+	margin-left: -947px;
+	}
+	#radio3:checked ~ .first {
+	margin-left: -1894px;
+	}
+	.service .max-width .serv-cont .container{
+	width: calc(40% - 20px);}
+	h2{
+		font-size: 70px;
+	}
+	/*Navbar*/
+.menu-btn{
+		display: block;
+		z-index: 999;
+		transition: 500ms;
+	}
+	.navbar .nav-menu ul{
+		position: fixed;
+		display: block;
+		flex-direction: column;
+		min-height: 50vh;
+		width: 100%;
+		right: -100%;
+		top: 0;
+		background: black;
+		text-align: center;
+		padding: 80px;
+		opacity: 90%;
+		transition: all 1000ms ease;
+
+	}
+.rotate{
+	color: white;
+	transform: rotate(-90deg);}
+
+.navbar .nav-menu ul.menu-left{
+	right: 0;
+}
+	.navbar ul li{
+		display: block;	
+		width: 100%;
+		justify-content: center;
+	}
+.navbar .nav-menu .menu li a{
+	color: white;
+	display: inline-block;
+	margin-top: 20px;
+}
+	/*Navbar End!!!*/
+}
 @media(max-width: 690px){
+	
+	
+	.contact .max-width{
+	padding: auto 0;
+}
+	.contact .contact-cont .contact-info{
+	width: calc(50% - 20px);
+}
+	.about .column.left img{
+	display: block;
+	width: 400px;
+	height: 500px;
+}
+	.about{
+		margin: 0;
+	}
+	.about .max-width{
+	display: flex;
+	width: 100%;
+	height: auto;
+	display: inline-block;
+
+}
+.about .column.left{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.about .column.right{
+	width: 100%;
+	display: block;
+	text-align: center;
+	}
+.about .right span{
+	justify-content: center;
+	text-align: justify;
+}
+
+
+	.package .column .col-pack{
+	width: calc(80% - 20px);
+}
+	.service .max-width .serv-cont .container{
+	width: calc(45% - 20px);}
+	h2{
+		font-size: 50px;
+	}
 .col-1{
 		width: 690px;
 	}
@@ -500,7 +738,48 @@ body{
 }
 }
 @media(max-width: 500px){
-	.col-1{
+	.contact{width: 100%; position: relative;}
+	.about .max-width{width: 100%;}
+	.contact .max-width{
+	padding: 30px 0;
+}
+	.contact .contact-cont .contact-info{
+	width: calc(60% - 10px);
+
+}
+	.about{
+		margin: 0;
+	}
+	.about .max-width{
+	display: flex;
+	width: 100%;
+	height: auto;
+	display: inline-block;
+
+}
+.about .column.left img{
+	width: 100%;
+	height: 500px;
+}
+.about .column.left{
+	width: 100%;
+	display: block;
+}
+.about .column.right{
+	width: 100%;
+	display: block;
+	text-align: center;
+	}
+.about .right span{
+	justify-content: center;
+	text-align: justify;
+}
+
+
+	.package .column .col-pack{
+	width: calc(90% - 20px);
+}
+.col-1{
 		width: 500px;}
 #radio1:checked ~ .first {
 	margin-left: 0;
